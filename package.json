@@ -4,11 +4,12 @@
   "description": "This is the backend of my payqart preapproval app demo",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "start": "nodemon index.js"
   },
   "repository": {
     "type": "git",
-    "url": "github.com"
+    "url": "https://github.com/Dewalade1/payquart-shopping-credit-preapproval-app-backend-demo"
   },
   "keywords": [
     "payqart",
@@ -19,7 +20,7 @@
     "react"
   ],
   "author": "Oluwadewalade Ade-Onojobi",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "express": "^4.17.1",
     "nodemon": "^2.0.7"
