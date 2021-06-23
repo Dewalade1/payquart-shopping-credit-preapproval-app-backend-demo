@@ -32,16 +32,46 @@ const swaggerDocs = swaggerJsdoc(swaggerOption);
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 /* Swagger Initialization - END */
 
+// HOME ENDPOINT
+app.use('/index', ( req , res ) => {
+ console.log('Congrats! You are at paystaq shopping credit preapproval home route!!')
+ return res.status(200).send({
+     success: true,
+     error: null,
+     data:'Welcome to the paystaq shopping credit preapproval homepage!',
+     })
+})
+
+/**
+* @swagger
+* /index:
+*   get:
+*      description: This is the home of the paystaq shopping credit preapproval app backend connection
+*      tags:
+*          - home
+*      responses:
+*          '200':
+ *             description: Test Successful
+*          '400':
+*              description: Bad Request
+*          '500':
+*              description: Internal Server Error
+*/
+
 // TEST ENDPOINT
 app.use('/test', (req, res) => {
     console.log("Congrats! Your test route works!!!");
-    return res.status(200).send('Test Successful. \n\nWelcome to the paystaq shopping credit preapproval backend backend!!');
+    return res.status(200).send({
+        success: true,
+        error: null,
+        data:'Test Successful. \n\nWelcome to the paystaq shopping credit preapproval backend!!'
+        });
 });
 
 /**
 * @swagger
 * /test:
-*   post:
+*   get:
 *      description: Use this to test the paystaq shopping credit preapproval app backend connection
 *      tags:
 *          - test
@@ -59,6 +89,6 @@ app.use('/shopping-credits', shoppingCreditsRoutes);
 
 app.listen( port , () => {
     console.log('\n[*] Starting paystaq shopping credit preapproval app backend');
-    console.log('[+] App is now running..');
+    console.log('[+] Payqart app is now running...');
     console.log('[+] Listening on port ' + port + '...');
 });
