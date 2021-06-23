@@ -14,14 +14,6 @@ exports.apply = ( req, res, next ) => {
     }
 
     shoppingCreditsService.apply( data, (error, results ) => {
-        if (error) {
-            console.log(error);
-            return res.status(400).send({
-                success: false,
-                data: 'Could not submit application',
-                error: error,
-            })
-        }
 
         return res.status(200).send({
             success: true,
