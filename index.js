@@ -7,7 +7,7 @@ const shoppingCreditsRoutes = require('./routes/shoppingCredits.route');
 
 const app = express();
 
-const port = 443 || process.env.PORT;
+const port = 80 || process.env.PORT;
 
 app.use(bodyParser.json());
 
