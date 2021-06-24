@@ -21,7 +21,7 @@ const swaggerOption = {
             contact: {
                 name: "Oluwadewalade Ade-Onojobi",
             },
-            servers: ["http://localhost:4000/"],
+            servers: ["http://localhost:4000/","https://paystaq-shopping-credit-app.herokuapp.com/test"]
         },
     }),
     apis: ["index.js", "./routes/*.js"],

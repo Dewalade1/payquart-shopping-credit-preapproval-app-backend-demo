@@ -23,6 +23,7 @@ router.post('/apply', shoppingCreditsController.apply);
 *                 - salary
 *                 - nextSalaryDate
 *                 - existingLoans
+*                 - totalCartValue
 *                 - shoppingCredit
 *                 - downPayment
 *                 - monthlyInstallment
@@ -46,12 +47,15 @@ router.post('/apply', shoppingCreditsController.apply);
 *                      minLength: 1
 *                      maxLength: 5
 *                      example: no
+*                  totalCartValue:
+*                      type: integer
+*                      example: 80500
 *                  shoppingCredit:
 *                      type: integer
-*                      example: 45000
+*                      example: 60000
 *                  downPayment:
 *                      type: integer
-*                      example: 21000
+*                      example: 24150
 *                  monthlyInstallment:
 *                      type: integer
 *                      example: 25000
