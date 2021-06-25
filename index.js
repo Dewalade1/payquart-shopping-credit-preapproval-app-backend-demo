@@ -1,3 +1,4 @@
+const cors = require('cors');
 const express = require('express');
 const bodyParser = require('body-parser');
 const swaggerJsdoc = require('swagger-jsdoc');
@@ -10,6 +11,30 @@ const app = express();
 const port = process.env.PORT || 8080;
 
 app.use(bodyParser.json());
+
+var allowedOrigins = ['http://localhost:3000',
+                      'http://localhost:3001',
+                      'http://localhost:4000',
+                      'http://localhost:8080',
+                      'https://paystaq-shopping-credit-app.herokuapp.com/',
+                      'https://payqart-shopping-credit-app.herokuapp.com/',
+                      'https://paystaq-shopping-credit-preapproval-frontend-demo.vercel.app/',
+                      'https://payqart-shopping-credit-preapproval-frontend-demo-dewa.vercel.app/',
+                      'https://payqart-shopping-credit-preapproval-frontend-demo-git-main-dewa.vercel.app/'
+                      ];
+app.use(cors({
+  origin: function(origin, callback){
+    // allow requests with no origin 
+    // (like mobile apps or curl requests)
+    if(!origin) return callback(null, true);
+    if(allowedOrigins.indexOf(origin) === -1){
+      const msg = 'The CORS policy for this site does not ' +
+                'allow access from the Origin you are using.';
+      return callback(new Error(msg), false);
+    }
+    return callback(null, true);
+  }
+}));
 
 /* Swagger Initialization - START */
 const swaggerOption = {

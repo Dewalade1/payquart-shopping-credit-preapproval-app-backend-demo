@@ -52,7 +52,7 @@ router.post('/apply', shoppingCreditsController.apply);
 *                      example: 80500
 *                  shoppingCredit:
 *                      type: integer
-*                      example: 60000
+*                      example: 58604
 *                  downPayment:
 *                      type: integer
 *                      example: 24150
