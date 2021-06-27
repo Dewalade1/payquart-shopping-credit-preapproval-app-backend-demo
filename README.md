@@ -1,3 +1,5 @@
+![made with](https://img.shields.io/badge/made%20with-NodeJS-success?style=for-the-badge)
+
 ![Repo size](https://img.shields.io/github/repo-size/Dewalade1/payquart-shopping-credit-preapproval-app-backend-demo?style=for-the-badge)
 ![lines of code](https://img.shields.io/tokei/lines/github/Dewalade1/payquart-shopping-credit-preapproval-app-backend-demo?style=for-the-badge)
 
@@ -6,6 +8,11 @@
 ![repo stars](https://img.shields.io/github/stars/Dewalade1/payquart-shopping-credit-preapproval-app-backend-demo?style=for-the-badge)
 ![pull requests](https://img.shields.io/github/issues-pr/Dewalade1/payquart-shopping-credit-preapproval-app-backend-demo?style=for-the-badge)
 ![Contributors](https://img.shields.io/github/contributors/Dewalade1/payquart-shopping-credit-preapproval-app-backend-demo?style=for-the-badge)
+
+![license](https://img.shields.io/github/license/Dewalade1/payquart-shopping-credit-preapproval-app-backend-demo?style=for-the-badge)
+![environments](https://img.shields.io/badge/environments%20-2-yellowgreen?style=for-the-badge)
+
+
 
 
 
@@ -17,9 +24,9 @@ This the backend of the paystaq app shopping credit pre-approval application for
 
 ## Packages used
 
-* express
-* CORS
-* Swagger
+* [express](https://expressjs.com/)
+* [CORS](https://expressjs.com/en/resources/middleware/cors.html)
+* [Swagger](https://swagger.io/tools/swagger-ui/)
 
 ## Useful Links
 
