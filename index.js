@@ -2,6 +2,7 @@ const cors = require('cors');
 const express = require('express');
 const bodyParser = require('body-parser');
 const swaggerJsdoc = require('swagger-jsdoc');
+const moesifExpress = require('moesif-express');
 const swaggerUi = require('swagger-ui-express');
 
 const shoppingCreditsRoutes = require('./routes/shoppingCredits.route');
@@ -12,7 +13,9 @@ const port = process.env.PORT || 8080;
 
 app.use(bodyParser.json());
 
-var allowedOrigins = ['http://localhost:3000',
+// setup moestif
+
+const allowedOrigins = ['http://localhost:3000',
                       'http://localhost:3001',
                       'http://localhost:4000',
                       'http://localhost:8080',
@@ -22,6 +25,7 @@ var allowedOrigins = ['http://localhost:3000',
                       'https://payqart-shopping-credit-preapproval-frontend-demo-dewa.vercel.app/',
                       'https://payqart-shopping-credit-preapproval-frontend-demo-git-main-dewa.vercel.app/'
                       ];
+                      
 app.use(cors({
   origin: function(origin, callback){
     // allow requests with no origin 
@@ -58,7 +62,7 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 /* Swagger Initialization - END */
 
 // HOME ENDPOINT
-app.use('/index', ( req , res ) => {
+app.get('/', ( req , res ) => {
  console.log('Congrats! You are at paystaq shopping credit preapproval home route!!')
  return res.status(200).send({
      success: true,
@@ -69,7 +73,7 @@ app.use('/index', ( req , res ) => {
 
 /**
 * @swagger
-* /index:
+* /:
 *   get:
 *      description: This is the home of the paystaq shopping credit preapproval app backend connection
 *      tags:

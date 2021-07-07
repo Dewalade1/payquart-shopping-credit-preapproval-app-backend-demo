@@ -13,7 +13,7 @@
 ![environments](https://img.shields.io/badge/environments%20-2-yellowgreen?style=for-the-badge)
 
 
-
+![paystaq logo](./public/payqart-logo-removebg-preview.png)
 
 
 # paystaq-shopping-credit-preapproval-backend-demo
@@ -33,7 +33,7 @@ This the backend of the paystaq app shopping credit pre-approval application for
 * [test link](https://paystaq-shopping-credit-app.herokuapp.com/test/)
 * [API docs](https://paystaq-shopping-credit-app.herokuapp.com/api-docs/)
 
-## Note
+## Notes
 
 * The API docs allow users test the API by clicking the 'Try it out' button.
 
@@ -41,4 +41,5 @@ This the backend of the paystaq app shopping credit pre-approval application for
 
 ## Further improvements
 
-* Add input data validation in controllers
+* Add input data validation in controllers using express-validator
+* Possible add more features to the app 
